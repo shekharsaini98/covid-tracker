@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
-import countryList from '../../countryList';
 import {Link} from 'react-router-dom';
 import './SearchCounty.css';
-function SearchCountry() {
+function SearchCountry({searchList, listType}) {
     const [searchName, setSearchName] = useState('')
     const [countryListShow, setCountryListShow] = useState('')
+    const clearSearch = ()=>{
+        setSearchName('');
+        setCountryListShow('');
+    }
     const handleSearch = (event)=>{
         let serchVal = event.target.value;
-        console.log('serchVal',serchVal)
         setSearchName(serchVal);
         if(serchVal.length === 0){
             setCountryListShow('');
         }
         else{
-            const newList = countryList.filter((ct)=>(ct[0]).toLowerCase().includes(serchVal.toLowerCase()));
-            const newctList = newList.map((ct,index)=><Link key={index} to={`/covid-tracker/${ct[1]}`}><li >{ct[0]}</li></Link>);
+            let newctList;
+            const newList = searchList.filter((ct)=>(ct[0]).toLowerCase().includes(serchVal.toLowerCase()));
+            newctList = newList.map((ct,index)=><Link onClick={()=>clearSearch()} key={index} to={(listType==='country')?`/${ct[1]}/`:`/india/${(ct[1].toLowerCase())}/`} ><li >{ct[0]}</li></Link>);
             setCountryListShow(newctList);
         }
     }

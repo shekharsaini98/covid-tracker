@@ -31,3 +31,32 @@
   padding:0.5rem;
   text-transform: capitalize;
 }
+.brandIcon{
+  font-size: 40px;
+  color:red;
+}
+.stateTextDiv{
+  display: flex;
+  flex-wrap: wrap;
+}
+.stateTextDiv p{
+  flex: 50%;
+  border: 1px solid #f5f5f5;
+  padding: 0.8rem;
+  margin-bottom: 10px;
+  color:white;
+  border-radius:6px;
+  font-weight:500;
+}
+.stateTextDiv p.green{
+  background-color:rgba(54, 162, 235, 1) ;
+}
+.stateTextDiv p.red{
+  background-color:rgba(255, 99, 132, 1) ;
+}
+.stateTextDiv p.blue{
+  background-color: rgba(75, 192, 192, 1);
+}
+.stateTextDiv p.yellow{
+  background-color: rgb(254, 176, 25);
+}
