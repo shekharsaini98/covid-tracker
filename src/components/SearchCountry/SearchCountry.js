@@ -14,7 +14,7 @@ function SearchCountry() {
         }
         else{
             const newList = countryList.filter((ct)=>(ct[0]).toLowerCase().includes(serchVal.toLowerCase()));
-            const newctList = newList.map((ct,index)=><Link key={index} to={`../${ct[1]}`}><li >{ct[0]}</li></Link>);
+            const newctList = newList.map((ct,index)=><Link key={index} to={`/covid-tracker/${ct[1]}`}><li >{ct[0]}</li></Link>);
             setCountryListShow(newctList);
         }
     }

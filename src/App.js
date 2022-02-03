@@ -14,8 +14,8 @@ function App() {
           <Header />
           <BrowserRouter>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/:country" element={<Country />} />
+              <Route path="/covid-tracker" element={<Home />} />
+              <Route path="/covid-tracker/:country" element={<Country />} />
             </Routes>
           </BrowserRouter>
           <Footer />

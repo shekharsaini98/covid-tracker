@@ -7,8 +7,8 @@ function Header() {
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto" >
-            <Nav.Link href="/"><b>Home</b></Nav.Link>
-            <Nav.Link href="/india"><b>Country</b></Nav.Link>
+            <Nav.Link href="/covid-tracker"><b>Home</b></Nav.Link>
+            <Nav.Link href="/covid-tracker/india"><b>Country</b></Nav.Link>
         </Nav>
     </Navbar.Collapse>
     </Container>

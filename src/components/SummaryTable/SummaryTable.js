@@ -7,7 +7,7 @@ function SummaryTable({tabledata}) {
   const tableMapData = tabledata.map((country,index)=>{
     const {Country,Slug,NewConfirmed,TotalConfirmed,NewDeaths,TotalDeaths,NewRecovered,TotalRecovered} = country
     const deathRate = ((TotalDeaths/TotalConfirmed)*100).toFixed(2)+' %';
-    return{col1:(index+1),col2:<Link className='tableLink' to={Slug}>{Country}</Link>,col3:TotalConfirmed,col4:TotalDeaths,col5:TotalRecovered,col6:NewConfirmed,col7:NewDeaths,col8:NewRecovered,col9:deathRate}
+    return{col1:(index+1),col2:<Link className='tableLink' to={`/covid-tracker/${Slug}`}>{Country}</Link>,col3:TotalConfirmed,col4:TotalDeaths,col5:TotalRecovered,col6:NewConfirmed,col7:NewDeaths,col8:NewRecovered,col9:deathRate}
   })
   const data = React.useMemo(() => tableMapData,[])
   const columns = React.useMemo(
