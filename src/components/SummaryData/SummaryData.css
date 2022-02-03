@@ -1,0 +1,27 @@
+
+.summaryCard{
+    background-color: #f5f5f5 !important;
+}
+.txt-center{
+    text-align:center;
+}
+.summaryGreen{
+    background-color: green;
+    color:white;
+    margin-bottom: 5px;
+    border-radius:8px;
+}
+.summaryRed{
+    background-color: red;
+    color:white;
+    margin-bottom: 5px;
+    border-radius:8px;
+}
+.summaryDataTitle{
+    font-size:14px;
+    font-weight:500;
+}
+.summaryDataNumber{
+    font-weight:500;
+    font-size:20px;
+}

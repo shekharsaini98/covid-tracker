@@ -1,0 +1,38 @@
+.tableWrapper{
+    overflow-x: auto  ;
+    border:2px solid black;
+    border-radius: 4px;
+    margin:15px;
+    margin-top:25px;
+    padding-bottom:15px;
+}
+.table{
+    width:100%;
+}
+.tableHead{
+    border:1px solid black;
+}
+.tableData{
+    border:1px solid black;
+}
+.pagination{
+    display:flex;
+    justify-content: center;
+}
+.pagination button{
+    border-radius: 4px;
+    border:1px solid lightgray;
+    width:40px;
+    margin:0 5px;
+    font-weight:bold;
+}
+.tableInput{
+    border-radius: 4px;
+    font-weight:500;
+    margin-right:5px;
+}
+.tableLink{
+    font-weight:bold;
+    color:blueviolet;
+    text-decoration: none;
+}
