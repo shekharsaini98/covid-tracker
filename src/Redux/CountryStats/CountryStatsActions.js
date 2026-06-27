@@ -1,5 +1,5 @@
-import axios from 'axios';
 import {COUNTRY_STATS_SUCCESS,COUNTRY_STATS_REQUEST,COUNTRY_STATS_ERROR} from './CountryStatsTypes';
+import { getCountryStatsResponse } from '../../data/mockCovidData';
 
 const countryStatsRequest = ()=>{
     return {
@@ -23,7 +23,7 @@ const countryStatsError = (error)=>{
 export const fetchCountryStats = (country)=>{
     return(dispatch)=>{
         dispatch(countryStatsRequest())
-        axios.get(`https://api.covid19api.com/total/country/${country}`).then(
+        Promise.resolve(getCountryStatsResponse(country)).then(
             response => {
                 dispatch(countryStatsSuccess(response))
             }

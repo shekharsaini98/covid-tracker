@@ -35,6 +35,13 @@
   font-size: 40px;
   color:red;
 }
+.data-disclaimer{
+  background:#fff3cd;
+  color:#664d03;
+  padding:0.5rem 1rem;
+  font-size:0.875rem;
+  border-bottom:1px solid #ffecb5;
+}
 .stateTextDiv{
   display: flex;
   flex-wrap: wrap;

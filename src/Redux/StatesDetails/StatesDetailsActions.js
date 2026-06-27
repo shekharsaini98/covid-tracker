@@ -1,7 +1,7 @@
-import axios from 'axios';
 import {STATES_STATS_SUCCESS,
 STATES_STATS_REQUEST,
 STATES_STATS_ERROR} from './StatesDetailsTypes';
+import { getIndiaStatesResponse } from '../../data/mockIndiaStatesData';
 
 const stateStatsRequest = ()=>{
     return {
@@ -25,7 +25,7 @@ const stateStatsError = (error)=>{
 export const fetchStateStats = ()=>{
     return(dispatch)=>{
         dispatch(stateStatsRequest())
-        axios.get(`https://www.mohfw.gov.in/data/datanew.json`).then(
+        Promise.resolve(getIndiaStatesResponse()).then(
             response => {
                 dispatch(stateStatsSuccess(response))
             }

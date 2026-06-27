@@ -1,5 +1,5 @@
-import axios from 'axios';
 import {GET_SUMMARY,GET_SUMMARY_REQUEST,GET_SUMMARY_ERROR} from './summaryTypes';
+import { getSummaryResponse } from '../../data/mockCovidData';
 
 const summaryRequest = ()=>{
     return {
@@ -23,7 +23,7 @@ const summaryError = (error)=>{
 export const getSummary = ()=>{
     return(dispatch)=>{
         dispatch(summaryRequest())
-        axios.get('https://api.covid19api.com/summary').then(
+        Promise.resolve(getSummaryResponse()).then(
             response => {
                 dispatch(summarySuccess(response))
             }
